@@ -1,27 +1,78 @@
+/* General Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9; /* Off-white background */
-    color: #333; /* Dark gray text for good contrast */
-}
-
-header {
-    background-color: #fff; /* White background for a clean look */
     color: #333; /* Dark gray text */
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for centering */
+    text-align: center;
 }
 
-nav a {
-    margin: 0 15px;
+/* Home Page Styling */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1 {
+    font-size: 3rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home h1::after {
+    content: '{';
+    font-size: 4rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #333;
+}
+
+.home nav {
+    margin-top: 20px;
+}
+
+.home nav a {
+    display: block;
+    font-size: 1.5rem;
+    margin: 10px 0;
     text-decoration: none;
-    color: #555; /* Medium gray text */
+    color: #555;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #777; /* Slightly darker gray on hover */
+.home nav a:hover {
+    color: #777;
+}
+
+/* Page Header (Other Pages) */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #777;
     text-decoration: underline;
 }
 
@@ -39,8 +90,7 @@ footer {
     color: #555;
     padding: 10px 0;
     text-align: center;
-    border-top: 1px solid #eee; /* Subtle top border */
+    border-top: 1px solid #eee;
 }
-
 
 
