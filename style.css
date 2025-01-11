@@ -12,23 +12,22 @@ body.home {
 .header-layout {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; 
 }
 
 .name {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-right: 10px; 
+    margin-right: 15px;
     color: #000;
 }
 
 .curly-group {
     display: flex;
-    align-items: stretch;
+    align-items: flex-start;
 }
 
 .curly-bracket {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
     margin-right: 10px;
     color: #000;
@@ -39,48 +38,45 @@ body.home {
 .links {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    height: 4rem; 
-    text-align: center; 
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 6rem;
+    text-align: left;
 }
 
 .links a {
     font-size: 1.5rem;
     text-decoration: none;
     color: #000;
-    margin: 0; 
+    margin: 0;
 }
 
 .links a:hover {
     color: #777;
 }
 
-
 @media (max-width: 600px) {
     .header-layout {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .name {
         margin-right: 0;
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
 
     .curly-group {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .curly-bracket {
         margin-right: 0;
-        margin-bottom: 5px; 
+        margin-bottom: 5px;
     }
 
     .links {
-        align-items: center; 
-        height: auto; 
+        align-items: flex-start;
+        height: auto;
     }
 }
-
-
-
