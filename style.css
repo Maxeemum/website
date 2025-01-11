@@ -1,61 +1,3 @@
-body.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-}
-
-.header-layout {
-    display: flex;
-    align-items: center;
-}
-
-.name {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-right: 15px;
-    color: #000;
-}
-
-.curly-group {
-    display: flex;
-    align-items: flex-start;
-}
-
-.curly-bracket {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-right: 10px;
-    color: #000;
-    display: flex;
-    align-items: center;
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    height: 6rem;
-    text-align: left;
-}
-
-.links a {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #000;
-    margin: 0;
-}
-
-.links a:hover {
-    color: #777;
-}
-
-/* For non-home pages */
 body.page {
     margin: 0;
     padding: 0;
@@ -68,6 +10,7 @@ header {
     background-color: #fff;
     padding: 20px 0;
     border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
 header h1 {
@@ -77,26 +20,21 @@ header h1 {
     color: #000;
 }
 
-header h2 {
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin: 5px 0 0 0;
-    color: #666;
-}
-
-nav {
+header nav {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
 }
 
-nav a {
-    margin: 0 15px;
-    font-size: 1rem;
+header nav a {
+    font-size: 1.5rem; 
     font-weight: bold;
     text-decoration: none;
-    color: #000;
+    color: #000; 
 }
 
-nav a:hover {
+header nav a:hover {
     color: #777;
 }
 
@@ -105,43 +43,68 @@ main {
     font-size: 1.2rem;
 }
 
-/* Responsive adjustments */
+.curly-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px; 
+}
+
+.curly-bracket {
+    font-size: 6rem; 
+    font-weight: bold;
+    color: #000;
+    margin-right: 15px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: #000;
+    margin: 5px 0;
+}
+
+.links a:hover {
+    color: #777;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin: 20px 0;
+}
+
+.page-subnav {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 600px) {
-    .header-layout {
-        flex-direction: column;
-    }
-
-    .name {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .curly-group {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .curly-bracket {
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-
-    .links {
-        align-items: flex-start;
-        height: auto;
-    }
-
     header h1 {
         font-size: 2rem;
     }
 
-    header h2 {
-        font-size: 1rem;
+    header nav a {
+        font-size: 1.2rem;
+        margin: 0 10px;
     }
 
-    nav a {
-        font-size: 0.9rem;
-        margin: 0 10px;
+    .curly-bracket {
+        font-size: 5rem; 
+    }
+
+    .links {
+        font-size: 1.2rem;
     }
 }
 
