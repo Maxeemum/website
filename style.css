@@ -23,24 +23,25 @@ body.home {
 
 .curly-group {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
+    align-items: flex-start;
 }
 
 .curly-bracket {
     font-size: 5rem;
     font-weight: bold;
+    margin-right: 10px;
     color: #000;
+    display: flex;
+    align-items: center;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 5px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 6rem;
+    text-align: left;
 }
 
 .links a {
@@ -54,6 +55,7 @@ body.home {
     color: #777;
 }
 
+/* For non-home pages */
 body.page {
     margin: 0;
     padding: 0;
@@ -103,6 +105,7 @@ main {
     font-size: 1.2rem;
 }
 
+/* Responsive adjustments */
 @media (max-width: 600px) {
     .header-layout {
         flex-direction: column;
@@ -115,15 +118,17 @@ main {
 
     .curly-group {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .curly-bracket {
-        margin-bottom: 10px;
+        margin-right: 0;
+        margin-bottom: 5px;
     }
 
     .links {
-        align-items: center;
+        align-items: flex-start;
+        height: auto;
     }
 
     header h1 {
