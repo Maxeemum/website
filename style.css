@@ -9,6 +9,17 @@ body.home {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+a:hover {
+    color: #777;
+}
+
 .header-layout {
     display: flex;
     align-items: center;
@@ -24,7 +35,7 @@ body.home {
 
 .curly-group {
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .curly-bracket {
@@ -45,19 +56,13 @@ body.home {
 
 .links a {
     font-size: 1.5rem;
-    text-decoration: none;
-    color: #000;
     margin: 0;
-}
-
-.links a:hover {
-    color: #777;
 }
 
 @media (max-width: 600px) {
     .header-layout {
-        flex-direction: column; 
-        text-align: left; 
+        flex-direction: column;
+        text-align: left;
     }
 
     .name {
@@ -66,19 +71,18 @@ body.home {
     }
 
     .curly-group {
-        flex-direction: row; 
+        flex-direction: row;
         align-items: center;
         width: 100%;
     }
 
     .curly-bracket {
-        font-size: 4rem; 
+        font-size: 4rem;
         margin-right: 10px;
     }
 
     .links {
-        flex-direction: column; 
+        flex-direction: column;
         height: auto;
     }
 }
-
