@@ -22,8 +22,11 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+body.page .header-layout {
     border-bottom: 2px solid #000; 
-    padding-bottom: 10px;
+    padding-bottom: 10px; 
     margin-bottom: 20px; 
 }
 
