@@ -1,92 +1,76 @@
-body.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background-color: #f9f9f9;
+body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
 }
 
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover {
-    color: #777;
+body.page {
+    text-align: center;
 }
 
 .header-layout {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-body.page .header-layout {
-    border-bottom: 2px solid #000; 
-    padding-bottom: 10px; 
-    margin-bottom: 20px; 
 }
 
 .name {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-right: 15px;
     color: #000;
+    margin-bottom: 10px;
 }
 
 .curly-group {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .curly-bracket {
     font-size: 5rem;
-    font-weight: bold;
-    margin-right: 10px;
     color: #000;
 }
 
 .links {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    height: 6rem;
-    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .links a {
     font-size: 1.5rem;
-    margin: 0;
+    text-decoration: none;
+    color: #000;
 }
 
-@media (max-width: 600px) {
-    .header-layout {
-        flex-direction: column;
-        text-align: left;
-    }
+.links a:hover {
+    color: #777;
+}
 
-    .name {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
+.content {
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-    .curly-group {
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-    }
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
 
-    .curly-bracket {
-        font-size: 4rem;
-        margin-right: 10px;
-    }
-
-    .links {
-        flex-direction: column;
-        height: auto;
-    }
+.content ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
