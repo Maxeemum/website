@@ -1,40 +1,52 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #777;
+    --background-color: #f9f9f9;
+    --font-family: 'Arial', sans-serif;
+}
+
 body.home {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    text-align: center;
-    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    text-align: center;
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--primary-color);
+    transition: color 0.3s ease; 
 }
 
 a:hover {
-    color: #777;
+    color: var(--secondary-color);
 }
 
 .header-layout {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 20px;
 }
 
 body.page .header-layout {
-    border-bottom: 2px solid #000; /* Adds a black line */
-    padding-bottom: 10px; /* Adds space between content and line */
-    margin-bottom: 20px; /* Adds space below the line */
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .name {
     font-size: 2.5rem;
     font-weight: bold;
     margin-right: 15px;
-    color: #000;
+    color: var(--primary-color);
 }
 
 .curly-group {
@@ -46,7 +58,7 @@ body.page .header-layout {
     font-size: 5rem;
     font-weight: bold;
     margin-right: 10px;
-    color: #000;
+    color: var(--primary-color);
 }
 
 .links {
@@ -61,12 +73,13 @@ body.page .header-layout {
 .links a {
     font-size: 1.5rem;
     margin: 0;
+    padding: 2px 0;
 }
 
 @media (max-width: 600px) {
     .header-layout {
         flex-direction: column;
-        text-align: left;
+        text-align: center;
     }
 
     .name {
@@ -88,5 +101,11 @@ body.page .header-layout {
     .links {
         flex-direction: column;
         height: auto;
+        align-items: center; 
+    }
+
+    .links a {
+        text-align: center;
     }
 }
+
