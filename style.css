@@ -1,143 +1,92 @@
-/* Define theme variables */
-:root {
-    --primary-color: #000; /* Black for text */
-    --secondary-color: #777; /* Subtle gray for accents */
-    --background-color: #f9f9f9; /* Light background */
-    --highlight-color: #0078ff; /* Subtle blue for interactions */
-    --font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
-}
-
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-}
-
-/* Centered layout for the home page */
 body.home {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
-/* Link styles */
 a {
     text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
+    color: #000;
 }
 
 a:hover {
-    color: var(--highlight-color);
+    color: #777;
 }
 
-/* Header layout */
 .header-layout {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    border-bottom: 2px solid var(--primary-color);
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center;
 }
 
-.header-layout .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
+body.page .header-layout {
+    border-bottom: 2px solid #000; /* Adds a black line */
+    padding-bottom: 10px; /* Adds space between content and line */
+    margin-bottom: 20px; /* Adds space below the line */
 }
 
-.header-layout nav {
-    display: flex;
-    gap: 20px;
-}
-
-.header-layout nav a {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-/* Typography for titles and text */
 .name {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--primary-color);
+    margin-right: 15px;
+    color: #000;
 }
 
 .curly-group {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    gap: 10px;
 }
 
 .curly-bracket {
     font-size: 5rem;
     font-weight: bold;
-    color: var(--primary-color);
+    margin-right: 10px;
+    color: #000;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 6rem;
+    text-align: left;
 }
 
 .links a {
     font-size: 1.5rem;
-    color: var(--primary-color);
-    text-align: center;
+    margin: 0;
 }
 
-/* Footer styles */
-.footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-    border-top: 2px solid var(--primary-color);
-    font-size: 0.9rem;
-    color: var(--secondary-color);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .header-layout {
         flex-direction: column;
-        align-items: center;
-        padding: 20px;
+        text-align: left;
     }
 
-    .header-layout nav {
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 10px;
+    .name {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .curly-group {
         flex-direction: row;
         align-items: center;
+        width: 100%;
     }
 
     .curly-bracket {
         font-size: 4rem;
+        margin-right: 10px;
     }
 
     .links {
-        gap: 15px;
+        flex-direction: column;
+        height: auto;
     }
 }
