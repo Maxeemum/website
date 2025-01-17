@@ -14,6 +14,7 @@ header {
 
 h2 {
     text-align: center;
+    margin-top: 20px;
 }
 
 nav a {
@@ -30,7 +31,8 @@ nav a:hover {
 main {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
     padding: 20px;
     height: 100vh;
     text-align: left;
@@ -73,6 +75,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 body.page .header-layout {
