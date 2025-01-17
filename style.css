@@ -29,6 +29,10 @@ nav a:hover {
 }
 
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 20px;
     height: 100vh;
     text-align: left;
@@ -56,11 +60,6 @@ body.home {
 
 body.page, body.projects, body.certifications, body.links {
     text-align: left;
-    padding-top: 80px;
-}
-
-body.page header, body.projects header, body.certifications header, body.links header {
-    position: relative;
 }
 
 a {
@@ -145,5 +144,3 @@ body.page .header-layout {
         height: auto;
     }
 }
-
-
