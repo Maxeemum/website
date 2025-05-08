@@ -2,15 +2,21 @@ name: "Hourly Forecast Plot"
 
 on:
   schedule:
-    - cron: '0 * * * *'  # every hour on the hour UTC
+    - cron: '0 * * * *'
 
 jobs:
   update-plot:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: sqlite:///data/wholesale.db   # if you need this too
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+
+      - name: Restore .env from secret
+        run: |
+          echo "${{ secrets.SECRET_ENV }}" > .env
 
       - name: Set up Python
         uses: actions/setup-python@v4
