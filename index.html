@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maxwell Eibl</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maxeemum Website</title>
+  <!-- Link to your existing stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="home">
-    <main>
-        <div class="header-layout">
-            <div class="name">Maxwell Eibl</div>
-            <div class="curly-group">
-                <span class="curly-bracket">{</span>
-                <div class="links">
-                    <a href="projects.html">Projects</a>
-                    <a href="certifications.html">Certifications</a>
-                    <a href="blog.html">Extra</a>
-                </div>
-            </div>
-        </div>
-    </main>
+<body>
+  <header>
+    <h1>Welcome to Maxeemum</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <!-- add your other nav links here -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Your existing content goes here -->
+    <section id="about">
+      <h2>About</h2>
+      <p>Put your site’s main content here.</p>
+    </section>
+  </main>
+
+  <!-- Pool-Price Forecast -->
+  <section id="forecast" style="margin: 2em 0;">
+    <h2>Pool-Price Forecast</h2>
+    <img
+      id="forecast-img"
+      alt="Latest pool-price forecast"
+      style="max-width:100%; height:auto;"
+    />
+    <script>
+      // Cache-bust so the browser always fetches the newest image
+      document.getElementById('forecast-img').src =
+        'plots/forecast.png?ts=' + Date.now();
+    </script>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Maxeemum</p>
+  </footer>
 </body>
 </html>
 
