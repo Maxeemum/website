@@ -1,0 +1,36 @@
+name: "Hourly Forecast Plot"
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # every hour on the hour UTC
+
+jobs:
+  update-plot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate forecast plot
+        run: python scripts/generate_forecast_plot.py
+
+      - name: Commit & push updated plot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add plots/forecast.png
+          git diff --quiet || git commit -m "chore: update forecast plot"
+          git push
